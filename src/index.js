@@ -1,14 +1,14 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+let root = ReactDOM.createRoot(document.getElementById('root'));
 
 function Display(){
     let [name , setName] = useState([]);
 
     return(
-        <>
+        <React.Fragment>
             <form>
                 <table>
                     <tr>
@@ -26,7 +26,7 @@ function Display(){
                 </table>
             </form>
             <h1>{name}</h1>
-        </> 
+        </React.Fragment> 
     );
 }
 
